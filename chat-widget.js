@@ -38,9 +38,9 @@
     bottom: 90px;
     right: 20px;
     z-index: 1000;
-    width: 90%;
-    max-width: 380px;
-    height: 80vh;
+    width: 380px;
+    max-width: none;
+    height: 580px;
     background: var(--chat-color-surface);
     border-radius: var(--chat-radius-lg);
     box-shadow: var(--chat-shadow-lg);
@@ -55,11 +55,11 @@
 
 @media (max-width: 600px) {
   .chat-assist-widget .chat-window {
-    width: 100% !important;
-    height: 100vh !important;
-    bottom: 0 !important;
-    right: 0 !important;
-    border-radius: 0 !important;
+    width: 320px !important;
+    height: 480px !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    border-radius: 12px !important;
   }
 }
 
