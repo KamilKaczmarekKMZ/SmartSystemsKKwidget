@@ -725,8 +725,8 @@
         return indicator;
     }
 .chat-assist-widget .chat-launcher svg {
-    width: 24px;
-    height: 24px;
+    width: 15px;
+    height: 15px;
 }
 
 .chat-assist-widget .chat-launcher-text {
