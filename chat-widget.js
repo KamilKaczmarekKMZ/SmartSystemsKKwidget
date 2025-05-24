@@ -980,4 +980,22 @@
             chatWindow.classList.remove('visible');
         });
     });
+
+    window.addEventListener("load", function () {
+  const interval = setInterval(() => {
+    const iframe = document.querySelector("iframe");
+
+    if (iframe) {
+      const isMobile = window.innerWidth <= 768;
+      iframe.style.width = isMobile ? "90vw" : "400px";
+      iframe.style.height = isMobile ? "70vh" : "600px";
+      iframe.style.borderRadius = "10px";
+      iframe.style.bottom = "20px";
+      iframe.style.right = "20px";
+      iframe.style.zIndex = "9999";
+      iframe.style.maxWidth = "100%";
+      clearInterval(interval);
+    }
+  }, 500);
+});
 })();
