@@ -54,13 +54,13 @@
 }
 
 @media (max-width: 600px) {
-    .chat-assist-widget .chat-window {
-        width: 100%;
-        height: 100vh;
-        bottom: 0;
-        right: 0;
-        border-radius: 0;
-    }
+  .chat-assist-widget .chat-window {
+    width: 100% !important;
+    height: 100vh !important;
+    bottom: 0 !important;
+    right: 0 !important;
+    border-radius: 0 !important;
+  }
 }
 
         .chat-assist-widget .chat-window.right-side {
