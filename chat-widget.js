@@ -737,18 +737,18 @@
 
 @media (max-width: 600px) {
     .chat-assist-widget .chat-launcher {
-        height: 44px !important;
-        padding: 0 12px !important;
-        gap: 6px !important;
+        height: 36px !important;
+        padding: 0 10px !important;
+        gap: 4px !important;
     }
 
     .chat-assist-widget .chat-launcher svg {
-        width: 18px !important;
-        height: 18px !important;
+        width: 14px !important;
+        height: 14px !important;
     }
 
     .chat-assist-widget .chat-launcher .chat-launcher-text {
-        font-size: 13px !important;
+        font-size: 11px !important;
     }
 }
     // Function to convert URLs in text to clickable links
