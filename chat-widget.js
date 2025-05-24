@@ -34,22 +34,34 @@
         }
 
         .chat-assist-widget .chat-window {
-            position: fixed;
-            bottom: 90px;
-            z-index: 1000;
-            width: 380px;
-            height: 580px;
-            background: var(--chat-color-surface);
-            border-radius: var(--chat-radius-lg);
-            box-shadow: var(--chat-shadow-lg);
-            border: 1px solid var(--chat-color-light);
-            overflow: hidden;
-            display: none;
-            flex-direction: column;
-            transition: var(--chat-transition);
-            opacity: 0;
-            transform: translateY(20px) scale(0.95);
-        }
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 1000;
+    width: 90%;
+    max-width: 380px;
+    height: 80vh;
+    background: var(--chat-color-surface);
+    border-radius: var(--chat-radius-lg);
+    box-shadow: var(--chat-shadow-lg);
+    border: 1px solid var(--chat-color-light);
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    transition: var(--chat-transition);
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+}
+
+@media (max-width: 600px) {
+    .chat-assist-widget .chat-window {
+        width: 100%;
+        height: 100vh;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+    }
+}
 
         .chat-assist-widget .chat-window.right-side {
             right: 20px;
@@ -981,21 +993,6 @@
         });
     });
 
-    window.addEventListener("load", function () {
-  const interval = setInterval(() => {
-    const iframe = document.querySelector("iframe");
-
-    if (iframe) {
-      const isMobile = window.innerWidth <= 768;
-      iframe.style.width = isMobile ? "90vw" : "400px";
-      iframe.style.height = isMobile ? "70vh" : "600px";
-      iframe.style.borderRadius = "10px";
-      iframe.style.bottom = "20px";
-      iframe.style.right = "20px";
-      iframe.style.zIndex = "9999";
-      iframe.style.maxWidth = "100%";
-      clearInterval(interval);
-    }
-  }, 500);
+   
 });
 })();
