@@ -55,10 +55,10 @@
 
 @media (max-width: 600px) {
   .chat-assist-widget .chat-window {
-    width: 320px !important;
-    height: 480px !important;
+    width: 90vw !important;
+    height: 75vh !important;
     bottom: 20px !important;
-    right: 20px !important;
+    right: 5vw !important;
     border-radius: 12px !important;
   }
 }
