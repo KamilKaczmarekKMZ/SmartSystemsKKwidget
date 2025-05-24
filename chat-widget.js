@@ -369,8 +369,8 @@
     }
 
     .chat-assist-widget .chat-launcher svg {
-        width: 18px;
-        height: 18px;
+        width: 15px;
+        height: 15px;
     }
 
     .chat-assist-widget .chat-launcher .chat-launcher-text {
@@ -392,8 +392,8 @@
         }
 
         .chat-assist-widget .chat-launcher svg {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
         }
         
         .chat-assist-widget .chat-launcher-text {
