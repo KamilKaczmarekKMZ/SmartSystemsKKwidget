@@ -361,6 +361,23 @@
             gap: 8px;
         }
 
+        @media (max-width: 600px) {
+    .chat-assist-widget .chat-launcher {
+        height: 44px;
+        padding: 0 12px 0 12px;
+        gap: 6px;
+    }
+
+    .chat-assist-widget .chat-launcher svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .chat-assist-widget .chat-launcher .chat-launcher-text {
+        font-size: 13px;
+    }
+}
+
         .chat-assist-widget .chat-launcher.right-side {
             right: 20px;
         }
