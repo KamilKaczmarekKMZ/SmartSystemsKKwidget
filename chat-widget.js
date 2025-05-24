@@ -545,8 +545,8 @@
             welcomeText: '',
             responseTimeText: '',
             poweredBy: {
-                text: 'Powered by n8n',
-                link: 'https://n8n.partnerlinks.io/fabimarkl'
+                text: 'Powered by SmartSystems',
+                link: 'https://www.instagram.com/kk_smartsystems/profilecard/?igsh=a2xlNGFwdXNzZTN0'
             }
         },
         style: {
