@@ -546,7 +546,7 @@
             responseTimeText: '',
             poweredBy: {
                 text: 'Powered by SmartSystemsKK',
-                link: 'https://n8n.partnerlinks.io/fabimarkl'
+                link: 'https://google.com'
             }
         },
         style: {
