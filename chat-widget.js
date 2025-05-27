@@ -969,7 +969,15 @@
         }
     });
     
+    launchButton.addEventListener('click', () => {
+        chatWindow.classList.toggle('visible');
+    });
 
-   
-});
+    // Close button functionality
+    const closeButtons = chatWindow.querySelectorAll('.chat-close-btn');
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            chatWindow.classList.remove('visible');
+        });
+    });
 })();
