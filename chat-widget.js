@@ -34,34 +34,22 @@
         }
 
         .chat-assist-widget .chat-window {
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    z-index: 1000;
-    width: 380px;
-    max-width: none;
-    height: 580px;
-    background: var(--chat-color-surface);
-    border-radius: var(--chat-radius-lg);
-    box-shadow: var(--chat-shadow-lg);
-    border: 1px solid var(--chat-color-light);
-    overflow: hidden;
-    display: none;
-    flex-direction: column;
-    transition: var(--chat-transition);
-    opacity: 0;
-    transform: translateY(20px) scale(0.95);
-}
-
-@media (max-width: 600px) {
-  .chat-assist-widget .chat-window {
-    width: 90vw !important;
-    height: 75vh !important;
-    bottom: 20px !important;
-    right: 5vw !important;
-    border-radius: 12px !important;
-  }
-}
+            position: fixed;
+            bottom: 90px;
+            z-index: 1000;
+            width: 380px;
+            height: 580px;
+            background: var(--chat-color-surface);
+            border-radius: var(--chat-radius-lg);
+            box-shadow: var(--chat-shadow-lg);
+            border: 1px solid var(--chat-color-light);
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+            transition: var(--chat-transition);
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+        }
 
         .chat-assist-widget .chat-window.right-side {
             right: 20px;
@@ -361,23 +349,6 @@
             gap: 8px;
         }
 
-        @media (max-width: 600px) {
-    .chat-assist-widget .chat-launcher {
-        height: 44px;
-        padding: 0 12px 0 12px;
-        gap: 6px;
-    }
-
-    .chat-assist-widget .chat-launcher svg {
-        width: 15px;
-        height: 15px;
-    }
-
-    .chat-assist-widget .chat-launcher .chat-launcher-text {
-        font-size: 13px;
-    }
-}
-
         .chat-assist-widget .chat-launcher.right-side {
             right: 20px;
         }
@@ -392,8 +363,8 @@
         }
 
         .chat-assist-widget .chat-launcher svg {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
         }
         
         .chat-assist-widget .chat-launcher-text {
@@ -574,8 +545,8 @@
             welcomeText: '',
             responseTimeText: '',
             poweredBy: {
-                text: 'Powered by SmartSystems',
-                link: 'https://www.instagram.com/kk_smartsystems/profilecard/?igsh=a2xlNGFwdXNzZTN0'
+                text: 'Powered by n8n',
+                link: 'https://n8n.partnerlinks.io/fabimarkl'
             }
         },
         style: {
@@ -685,7 +656,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
         </svg>
-        <span class="chat-launcher-text">Freedom</span>`;
+        <span class="chat-launcher-text">Need help?</span>`;
     
     // Add elements to DOM
     widgetRoot.appendChild(chatWindow);
@@ -724,33 +695,7 @@
         `;
         return indicator;
     }
-.chat-assist-widget .chat-launcher svg {
-    width: 15px;
-    height: 15px;
-}
 
-.chat-assist-widget .chat-launcher-text {
-    font-weight: 600;
-    font-size: 15px;
-    white-space: nowrap;
-}
-
-@media (max-width: 600px) {
-    .chat-assist-widget .chat-launcher {
-        height: 36px !important;
-        padding: 0 10px !important;
-        gap: 4px !important;
-    }
-
-    .chat-assist-widget .chat-launcher svg {
-        width: 14px !important;
-        height: 14px !important;
-    }
-
-    .chat-assist-widget .chat-launcher .chat-launcher-text {
-        font-size: 11px !important;
-    }
-}
     // Function to convert URLs in text to clickable links
     function linkifyText(text) {
         // URL pattern that matches http, https, ftp links
@@ -1024,17 +969,6 @@
         }
     });
     
-    launchButton.addEventListener('click', () => {
-        chatWindow.classList.toggle('visible');
-    });
-
-    // Close button functionality
-    const closeButtons = chatWindow.querySelectorAll('.chat-close-btn');
-    closeButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            chatWindow.classList.remove('visible');
-        });
-    });
 
    
 });
