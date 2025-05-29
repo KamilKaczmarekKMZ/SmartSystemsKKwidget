@@ -546,7 +546,7 @@
             responseTimeText: '',
             poweredBy: {
                 text: 'Powered by SmartSystemsKK',
-                link: 'https://google.com'
+                link: 'https://www.instagram.com/kk_smartsystems/profilecard/?igsh=a2xlNGFwdXNzZTN0'
             }
         },
         style: {
