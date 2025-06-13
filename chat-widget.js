@@ -37,8 +37,10 @@
             position: fixed;
             bottom: 90px;
             z-index: 1000;
-            width: 380px;
-            height: 580px;
+            width: 90vw;
+            max-width: 380px;
+            height: 80vh;
+            max-height: 580px;
             background: var(--chat-color-surface);
             border-radius: var(--chat-radius-lg);
             box-shadow: var(--chat-shadow-lg);
@@ -206,7 +208,7 @@
             font-size: 14px;
             line-height: 1.6;
             position: relative;
-            white-space: pre-line; /* This preserves line breaks */
+            white-space: pre-line;
         }
 
         .chat-assist-widget .chat-bubble.user-bubble {
@@ -226,7 +228,6 @@
             border: 1px solid var(--chat-color-light);
         }
 
-        /* Typing animation */
         .chat-assist-widget .typing-indicator {
             display: flex;
             align-items: center;
@@ -529,6 +530,65 @@
             opacity: 0.7;
             cursor: not-allowed;
             transform: none;
+        }
+
+        /* Mobile-specific styles */
+        @media (max-width: 480px) {
+            .chat-assist-widget .chat-window {
+                width: 100% !important;
+                height: 100% !important;
+                max-width: 100vw;
+                max-height: 100vh;
+                bottom: 0;
+                left: 0 !important;
+                right: 0 !important;
+                border-radius: 0;
+            }
+            
+            .chat-assist-widget .chat-launcher {
+                height: 48px;
+                padding: 0 16px 0 12px;
+                bottom: 15px;
+                right: 15px !important;
+                left: auto !important;
+            }
+            
+            .chat-assist-widget .chat-launcher svg {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .chat-assist-widget .chat-launcher-text {
+                font-size: 14px;
+            }
+            
+            .chat-assist-widget .chat-bubble {
+                max-width: 90% !important;
+                padding: 12px 16px;
+                font-size: 15px;
+            }
+            
+            .chat-assist-widget .chat-header {
+                padding: 12px;
+            }
+            
+            .chat-assist-widget .chat-messages {
+                padding: 15px;
+            }
+            
+            .chat-assist-widget .chat-controls {
+                padding: 12px;
+            }
+            
+            .chat-assist-widget .chat-textarea {
+                font-size: 15px;
+                padding: 12px 14px;
+            }
+            
+            .chat-assist-widget .chat-submit {
+                width: 44px;
+                height: 44px;
+            }
         }
     `;
     document.head.appendChild(widgetStyles);
@@ -897,7 +957,7 @@
         const typingIndicator = createTypingIndicator();
         messagesContainer.appendChild(typingIndicator);
         messagesContainer.scrollTop = messagesContainer.scrollHeight;
-
+        
         try {
             const response = await fetch(settings.webhook.url, {
                 method: 'POST',
@@ -942,6 +1002,11 @@
         messageTextarea.style.height = (messageTextarea.scrollHeight > 120 ? 120 : messageTextarea.scrollHeight) + 'px';
     }
 
+    // Reset textarea height
+    function resetTextareaHeight() {
+        messageTextarea.style.height = 'auto';
+    }
+
     // Event listeners
     startChatButton.addEventListener('click', showRegistrationForm);
     registrationForm.addEventListener('submit', handleRegistration);
@@ -951,7 +1016,7 @@
         if (messageText && !isWaitingForResponse) {
             submitMessage(messageText);
             messageTextarea.value = '';
-            messageTextarea.style.height = 'auto';
+            resetTextareaHeight();
         }
     });
     
@@ -964,7 +1029,7 @@
             if (messageText && !isWaitingForResponse) {
                 submitMessage(messageText);
                 messageTextarea.value = '';
-                messageTextarea.style.height = 'auto';
+                resetTextareaHeight();
             }
         }
     });
